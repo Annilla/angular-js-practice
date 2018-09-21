@@ -3,6 +3,10 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',
   template: `
+    <login></login>
+    <hr>
+    <user-form></user-form>
+    <hr>
     <h1>{{ title }}</h1>
     <button class = "btn btn-primary" [class.disabled] = "!isValid" (click) = "onClickMe($event)">Submit</button>
     <br />
