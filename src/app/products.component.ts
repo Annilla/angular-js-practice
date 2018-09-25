@@ -14,7 +14,7 @@ import { ProductService } from './product.service';
       </div>
     </ng-template>
   `,
-  providers: [ProductService]
+  // providers: [ProductService]
 })
 
 export class ProductsComponent {

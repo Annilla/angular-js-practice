@@ -11,7 +11,7 @@ import { ProductComponent } from './product.component';
 import { UserFormComponent } from './user-form.component';
 import { LoginComponent } from './login.component';
 // Service
-// import { ProductService } from './products.service';
+import { ProductService } from './product.service';
 // Pipe
 import { TruncatePipe } from './truncate.pipe'
 
@@ -30,7 +30,7 @@ import { TruncatePipe } from './truncate.pipe'
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [ProductService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
