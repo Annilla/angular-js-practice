@@ -3,17 +3,14 @@ import { Observable } from 'rxjs';
 import { Injectable } from '@angular/core';
 
 export interface GitHubUser {
-  html_url: string;
-  avatar_url: string;
-  login: string;
-  score: string;
+  items: Object;
 }
 
 @Injectable()
 export class GitHubService {
   constructor(private _http: HttpClient) {}
 
-  getGitHubDate (_searchTerm: Observable<GitHubUser>) {
+  getGitHubData (_searchTerm: String) {
     return this._http.get<GitHubUser>("https://api.github.com/search/users?q=" + _searchTerm)
   }
 }
