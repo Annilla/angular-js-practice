@@ -1,3 +1,17 @@
+<input type="search" class="form-control" [formControl]="searchControl" placeholder="Input github ID to search...">
+<h3>GitHub User Results</h3>
 <div *ngIf="isLoading">
   <i class="fas fa-spinner fa-spin"></i>
+</div>
+
+<div *ngFor="let user of users" class="media">
+  <div class="media-left">
+    <a [routerLink]="['user', user.login, user.score]">
+      <img class="media-object" width="100" src="{{ user.avatar_url }}" alt="{{ user.login }}">
+    </a>
+  </div>
+  <div class="media-body">
+    <h4 class="media-heading">{{ user.login }}</h4>
+    Score: {{ user.score }}
+  </div>
 </div>

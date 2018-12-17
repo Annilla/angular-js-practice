@@ -16,12 +16,17 @@ import { UserFormComponent } from './user-form.component';
 import { LoginComponent } from './login.component';
 import { SearchComponent } from './search.component';
 import { GithubComponent } from './github.component';
+import { HomeComponent } from './home.component';
+import { NotFoundComponent } from './notfound.component';
+import { GithubUserComponent } from './githubuser.component';
 // Service
 import { ProductService } from './product.service';
 import { LoginService } from './login.service';
 import { GitHubService } from './github.service';
 // Pipe
 import { TruncatePipe } from './truncate.pipe';
+// Routing
+import { routing } from './app.routing';
 
 @NgModule({
   declarations: [
@@ -34,12 +39,16 @@ import { TruncatePipe } from './truncate.pipe';
     SearchComponent,
     GithubComponent,
     TruncatePipe,
+    HomeComponent,
+    NotFoundComponent,
+    GithubUserComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    routing
   ],
   providers: [
     ProductService,

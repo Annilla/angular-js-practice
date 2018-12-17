@@ -3,7 +3,11 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',
   template: `
-    <github></github>
+    <ul>
+      <li><a routerLink="">Home</a></li>
+      <li><a routerLink="github">Github</a></li>
+    </ul>
+    <router-outlet></router-outlet>
     <hr>
     <search></search>
     <hr>
